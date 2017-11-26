@@ -1,0 +1,116 @@
+.svgBox {
+    width: 725px;
+    height: 600px;
+    background-color: #ffffff;
+}
+
+.svgBox2{
+    height: auto;
+    width: 260px;
+    background-color: #ffffff;
+}
+
+div {
+  float: left;
+}
+
+.button {
+    background-color: #000; /* Green */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    border-radius: 15px;
+    border: none;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    position: absolute;
+    z-index: 1;
+}
+
+.Name {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+
+.container {
+  width: 1010px;
+  height: 700px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border: 4px solid #000;
+  padding: 20px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+div.tooltip {
+  font-family: Helvetica, sans-serif;
+  color: #fff;
+  font-size: 10pt;
+  position: absolute;
+	text-align: center;
+  vertical-align: middle;
+	width: auto;
+	height: auto;
+	padding: 15px;
+	background: black;
+	border: 1px;
+	border-radius: 15px;
+	pointer-events: none;
+}
+
+.header {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #000;
+  width: 100%;
+  /*padding: 0px;*/
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+hr {
+  border: 2px solid #000;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis line, .axis path {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 36px;
+  color: #000;
+
+}

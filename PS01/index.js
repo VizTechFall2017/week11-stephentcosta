@@ -51,7 +51,7 @@ var div = d3.select("body")
 //     .attr("d", path)
 //     .attr("class", "area")
 //     .attr("stroke", "white")
-//     .attr("fill", "#00a6b4")
+//     .attr("fill", "#00a6b4"
 
 
 

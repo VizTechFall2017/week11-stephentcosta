@@ -33,7 +33,7 @@ var projection = d3.geoAlbers()
 
 var areaLookup = d3.map();
 console.log(areaLookup);
-var colorScale = d3.scaleLinear().range(['#fff','#000']);
+var colorScale = d3.scaleLinear().range(['#fff','#ceef92']);
 
 var div = d3.select("body")
 		    .append("div")

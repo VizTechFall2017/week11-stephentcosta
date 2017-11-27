@@ -42,6 +42,9 @@ var div = d3.select("body")
         // .style('stroke','#003c50')
         // .style('stroke-width',2)
 
+// var perc = ((d.units/53873) * 100).toFixed(1);
+//     $('#pointsperc').val(perc);
+
 // var group = svg.selectAll("g")
 //     .data(data.features)
 //     .enter()
@@ -81,19 +84,21 @@ queue()
             .data(mapData.features)          //bind to the features array in the map data
             .enter()
             .append("path")                 //add the paths to the DOM
-            .attr("d", path)                //actually draw them
+            .attr("d", path)               //actually draw them
             .attr("class", "feature")
             .attr('fill', function(d){
                 return colorScale(areaLookup.get(d.properties.PD));
             })
             .attr('stroke','#000')
             .attr('stroke-width',2)
-            .on('click', function(geography) {
-                        geography.properties.PD.append('Name') .text(geography.properties.PD);})
-                        // circle.append('title').text(function(d){return d.bank + '; ' + d.country});
+            // .on('click', function(geography) {
+            //             geography.properties.PD.append('Name') .text(geography.properties.PD);})
+                        // mapData.features.append('Name').text(function(d){return d.bank + '; ' + d.country});
+            .on("mouseover", function(){
+                document.getElementById('Name').innerHTML = (d.area);
+            })
 
-
-
+            // PD.append('area').text(function(d){return d.area});
 
 
             .on("mouseover", function(d) {
@@ -138,8 +143,8 @@ console.log(areaLookup.get(d.properties.PD));
 
                 //set up scales to position circles using the data
                 var scaleColor = d3.scaleOrdinal()
-                    .domain(["16-19", "20-24", "25-34", "35-44", "45-54", "55-64","65+"])
-                    .range(["#000000","#7B7D7D","#B3B6B7","#D7DBDD","#F2F3F4","#D0D3D4","#F2F3F4"]);
+                    .domain(["Commercial", "Residential", "Mixed", "Other"])
+                    .range(["#3894c1","#fd9457","#fff260","#77b894"]);
                 //var scaleY = d3.scaleLinear().domain([0,1200]).range([400, 0]);  //remember that 0,0 is at the top of the screen! 300 is the lowest value on the y axis
 
                 var nestedData = [];
@@ -159,7 +164,7 @@ console.log(areaLookup.get(d.properties.PD));
                     .value(function(d) { return d.total; });
 
                 //import the data from the .csv file
-                d3.csv('./ageDist.csv', function(dataIn){
+                d3.csv('./devDist.csv', function(dataIn){
 
                     nestedData = d3.nest()
                         .key(function(d){return d.year})
